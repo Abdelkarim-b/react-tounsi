@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+<body>
+    
+   <div id="root">
+      
+    
+   </div>
+   <script type="text/babel">
+    
+    //  const element = React.createElement(
+    //     "ul",
+    //     {id: 'list'},
+    //     React.createElement(
+    //         "li",
+    //         null,
+    //         "Algeria"
+    //     ),
+    //     React.createElement(
+    //         "li",
+    //         null,
+    //         "Tunisia"
+    //     ),
+    //     React.createElement(
+    //         "li",
+    //         null,
+    //         "Libyaaaaaaaaaaa"
+    //     ),
+    //     React.createElement(
+    //         "li",
+    //         null,
+    //         "Morroco"
+    //     ),
+        
+    // )
+
+    // const element = (
+    //     <ul>
+    //         <li>Algeria</li>
+    //         <li>Tunisia</li>
+    //         <li>Morroco</li>
+    //         <li>Libya</li>
+    //     </ul>
+    //     )
+
+    // class header
+
+    class Header extends React.Component{
+        render(){
+            return <h2>Header Corp</h2>
+        }
+    }
+    // Functional componenet
+    function Contact(){
+        return (
+        <div>
+           <h2> Welcome to contacte page !!!</h2>
+        </div>       
+        )
+    }
+
+    // Class Component
+    // class Home extends React.Component{
+    //     render(){
+    //         return (
+    //         <div>
+    //           <h1>Welcome to class Componnent !! </h1>
+    //           <Contact />
+    //         </div>
+
+    //         )} 
+    // }
+
+    function Home(){
+        return (
+            <div>
+                <Contact />
+                <h1> Welcome to home page function inside function</h1>
+                <Header />
+            </div>
+        )
+    }
+
+    ReactDOM.render(<Home />,document.getElementById('root'))
+   </script>
+</body>
+</html>
