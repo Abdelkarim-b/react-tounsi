@@ -54,11 +54,15 @@
           )
         }
     }
+
+    function Startpage(){
+        return <h1 className="w3-margin w3-jumbo">START PAGE</h1>
+    }
     
     function Start(){
         return(
             <header className="w3-container w3-red w3-center bb">
-                <h1 className="w3-margin w3-jumbo">START PAGE</h1>
+                <Startpage />
                 <p className="w3-xlarge">Template by w3.css</p>
                 <button className="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>
             </header>
@@ -103,15 +107,34 @@
                         </div>
                     </div>
                     </div>
-
-                    <div className="w3-container w3-black w3-center w3-opacity w3-padding-64">
-                        <h1 className="w3-margin w3-xlarge">Quote of the day: live life</h1>
-                    </div>
                 </div>
             )
         }
     }
 
+    class Social extends React.Component{
+        render(){
+            return (
+                   <div class="w3-xlarge w3-padding-32">
+                    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+                    <i class="fa fa-instagram w3-hover-opacity"></i>
+                    <i class="fa fa-snapchat w3-hover-opacity"></i>
+                    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+                    <i class="fa fa-twitter w3-hover-opacity"></i>
+                    <i class="fa fa-linkedin w3-hover-opacity"></i>
+                </div>
+            )
+        }
+    }
+
+    function Footer(){
+        return(
+            <footer class="w3-container w3-padding-64 w3-center w3-opacity">
+                <Social />  
+                <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+            </footer>
+        )
+    }
     class Home extends React.Component{
         render(){
           return (
@@ -119,6 +142,7 @@
                 <Top />
                 <Start />
                 <Content />
+                <Footer />
             </div>
           )
         }
